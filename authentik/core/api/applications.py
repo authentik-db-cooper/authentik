@@ -51,6 +51,9 @@ class ApplicationSerializer(ModelSerializer):
 
     launch_url = SerializerMethodField()
     provider_obj = ProviderSerializer(source="get_provider", required=False, read_only=True)
+    backchannel_providers_obj = ProviderSerializer(
+        source="backchannel_providers", required=False, read_only=True, many=True
+    )
 
     meta_icon = ReadOnlyField(source="get_meta_icon")
 
@@ -69,6 +72,8 @@ class ApplicationSerializer(ModelSerializer):
             "slug",
             "provider",
             "provider_obj",
+            "backchannel_providers",
+            "backchannel_providers_obj",
             "launch_url",
             "open_in_new_tab",
             "meta_launch_url",
@@ -80,6 +85,7 @@ class ApplicationSerializer(ModelSerializer):
         ]
         extra_kwargs = {
             "meta_icon": {"read_only": True},
+            "backchannel_providers": {"required": False},
         }
 
 
