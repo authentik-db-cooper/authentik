@@ -15836,7 +15836,7 @@ paths:
           type: string
           format: uuid
       - in: query
-        name: backchannel_applications
+        name: backchannel_application
         schema:
           type: string
           format: uuid
@@ -30731,6 +30731,14 @@ components:
           type: string
           description: Application's display Name.
           readOnly: true
+        assigned_backchannel_application_slug:
+          type: string
+          description: Internal application name, used in URLs.
+          readOnly: true
+        assigned_backchannel_application_name:
+          type: string
+          description: Application's display Name.
+          readOnly: true
         verbose_name:
           type: string
           description: Return object's verbose_name
@@ -30785,6 +30793,8 @@ components:
       required:
       - assigned_application_name
       - assigned_application_slug
+      - assigned_backchannel_application_name
+      - assigned_backchannel_application_slug
       - authorization_flow
       - component
       - meta_model_name
@@ -31475,6 +31485,14 @@ components:
           type: string
           description: Application's display Name.
           readOnly: true
+        assigned_backchannel_application_slug:
+          type: string
+          description: Internal application name, used in URLs.
+          readOnly: true
+        assigned_backchannel_application_name:
+          type: string
+          description: Application's display Name.
+          readOnly: true
         verbose_name:
           type: string
           description: Return object's verbose_name
@@ -31556,6 +31574,8 @@ components:
       required:
       - assigned_application_name
       - assigned_application_slug
+      - assigned_backchannel_application_name
+      - assigned_backchannel_application_slug
       - authorization_flow
       - component
       - meta_model_name
@@ -38409,6 +38429,14 @@ components:
           type: string
           description: Application's display Name.
           readOnly: true
+        assigned_backchannel_application_slug:
+          type: string
+          description: Internal application name, used in URLs.
+          readOnly: true
+        assigned_backchannel_application_name:
+          type: string
+          description: Application's display Name.
+          readOnly: true
         verbose_name:
           type: string
           description: Return object's verbose_name
@@ -38424,6 +38452,8 @@ components:
       required:
       - assigned_application_name
       - assigned_application_slug
+      - assigned_backchannel_application_name
+      - assigned_backchannel_application_slug
       - authorization_flow
       - component
       - meta_model_name
@@ -38639,6 +38669,14 @@ components:
           type: string
           description: Application's display Name.
           readOnly: true
+        assigned_backchannel_application_slug:
+          type: string
+          description: Internal application name, used in URLs.
+          readOnly: true
+        assigned_backchannel_application_name:
+          type: string
+          description: Application's display Name.
+          readOnly: true
         verbose_name:
           type: string
           description: Return object's verbose_name
@@ -38728,6 +38766,8 @@ components:
       required:
       - assigned_application_name
       - assigned_application_slug
+      - assigned_backchannel_application_name
+      - assigned_backchannel_application_slug
       - authorization_flow
       - client_id
       - component
@@ -38895,6 +38935,14 @@ components:
           type: string
           description: Application's display Name.
           readOnly: true
+        assigned_backchannel_application_slug:
+          type: string
+          description: Internal application name, used in URLs.
+          readOnly: true
+        assigned_backchannel_application_name:
+          type: string
+          description: Application's display Name.
+          readOnly: true
         verbose_name:
           type: string
           description: Return object's verbose_name
@@ -38918,6 +38966,8 @@ components:
       required:
       - assigned_application_name
       - assigned_application_slug
+      - assigned_backchannel_application_name
+      - assigned_backchannel_application_slug
       - authorization_flow
       - component
       - meta_model_name
@@ -39222,6 +39272,14 @@ components:
           type: string
           description: Application's display Name.
           readOnly: true
+        assigned_backchannel_application_slug:
+          type: string
+          description: Internal application name, used in URLs.
+          readOnly: true
+        assigned_backchannel_application_name:
+          type: string
+          description: Application's display Name.
+          readOnly: true
         verbose_name:
           type: string
           description: Return object's verbose_name
@@ -39319,6 +39377,8 @@ components:
       - acs_url
       - assigned_application_name
       - assigned_application_slug
+      - assigned_backchannel_application_name
+      - assigned_backchannel_application_slug
       - authorization_flow
       - component
       - meta_model_name
